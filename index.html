@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gold Value & Price Calculator</title>
+<style>
+  :root {
+    --bg: #f5f1e8;
+    --card: #ffffff;
+    --text: #2a2416;
+    --muted: #6b6250;
+    --gold: #b8860b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 40px 20px 60px; }
+  .lang-switch { text-align: right; margin-bottom: 20px; }
+  .lang-switch a { color: var(--gold); text-decoration: none; font-weight: bold; margin-left: 12px; }
+  header { text-align: center; margin-bottom: 36px; }
+  .logo-badge {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 64px; height: 64px; border-radius: 16px;
+    background: var(--gold); color: #fff; font-size: 28px; font-weight: bold;
+    margin-bottom: 16px;
+  }
+  h1 { font-size: 28px; margin: 0 0 8px; }
+  .tagline { color: var(--muted); font-size: 16px; margin: 0; }
+  .card {
+    background: var(--card); border-radius: 14px; padding: 24px;
+    margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .card h2 { font-size: 17px; margin-top: 0; color: var(--gold); }
+  ul.features { list-style: none; padding: 0; margin: 0; }
+  ul.features li { padding: 8px 0; border-bottom: 1px solid #e8e0cc; }
+  ul.features li:last-child { border-bottom: none; }
+  .stores { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+  .store-pill {
+    background: #e8e0cc; color: var(--muted); padding: 10px 16px;
+    border-radius: 8px; font-size: 13px; font-weight: bold;
+  }
+  footer { text-align: center; color: #a39a82; font-size: 13px; margin-top: 36px; }
+  footer a { color: var(--gold); text-decoration: none; }
+  #en { display: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="lang-switch">
+    <a href="#" onclick="show('fr');return false;">Français</a>
+    <a href="#" onclick="show('en');return false;">English</a>
+  </div>
+
+  <div id="fr">
+    <header>
+      <div class="logo-badge">Au</div>
+      <h1>Gold Value & Price Calculator</h1>
+      <p class="tagline">Le cours de l'or en direct + calcul de valeur de fonte</p>
+    </header>
+
+    <div class="card">
+      <h2>Ce que fait l'application</h2>
+      <p>Cours de l'or en temps réel converti instantanément en valeur de fonte selon votre poids et votre carat. Comparateur d'offres de rachat et table des carats incluse.</p>
+      <ul class="features">
+        <li>Cours de l'or en direct, toutes devises</li>
+        <li>Calcul de valeur de fonte par poids et carat</li>
+        <li>Comparateur d'offres de rachat</li>
+        <li>Disponible en 25 langues</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Disponibilité</h2>
+      <p>L'application est en cours de préparation pour les stores.</p>
+      <div class="stores">
+        <span class="store-pill">App Store — bientôt disponible</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Informations légales</h2>
+      <p><a href="privacy.html">Politique de confidentialité</a></p>
+      <p>Contact : <a href="mailto:gregportailler@gmail.com">gregportailler@gmail.com</a></p>
+    </div>
+  </div>
+
+  <div id="en">
+    <header>
+      <div class="logo-badge">Au</div>
+      <h1>Gold Value & Price Calculator</h1>
+      <p class="tagline">Live gold price + instant melt value calculator</p>
+    </header>
+
+    <div class="card">
+      <h2>What the app does</h2>
+      <p>Real-time gold price instantly converted into melt value based on your weight and karat. Includes a buyer offer comparator and karat purity table.</p>
+      <ul class="features">
+        <li>Live gold price, any currency</li>
+        <li>Melt value calculation by weight and karat</li>
+        <li>Buyer offer comparator</li>
+        <li>Available in 25 languages</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Availability</h2>
+      <p>The app is currently being prepared for the stores.</p>
+      <div class="stores">
+        <span class="store-pill">App Store — coming soon</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Legal</h2>
+      <p><a href="privacy.html">Privacy Policy</a></p>
+      <p>Contact: <a href="mailto:gregportailler@gmail.com">gregportailler@gmail.com</a></p>
+    </div>
+  </div>
+
+  <footer>Gold Value & Price Calculator — © 2026 Grégory Portailler</footer>
+</div>
+
+<script>
+  function show(lang) {
+    document.getElementById('fr').style.display = lang === 'fr' ? 'block' : 'none';
+    document.getElementById('en').style.display = lang === 'en' ? 'block' : 'none';
+  }
+</script>
+
+</body>
+</html>
